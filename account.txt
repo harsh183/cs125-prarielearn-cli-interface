@@ -1,2 +1,2 @@
-your_netid@illinois.edu
-your_actual_password
+sample_netid
+sample_pAssw0rd
