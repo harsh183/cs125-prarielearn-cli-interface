@@ -7,6 +7,7 @@
 require 'pry'
 require 'watir'
 require 'nokogiri'
+require 'webdrivers'
 
 def login
   @browser.goto("https://prairielearn.engr.illinois.edu/pl/")
@@ -73,12 +74,13 @@ def print_seperator
 	puts "\n\n\n\n\n"
 end
 
-@browser = Watir::Browser.new
+@browser = Watir::Browser.new :firefox
 
 puts "Welcome to CLI prarielearn (tho this is using the website rn, subject to change later)"
 print_seperator
 
 login
+binding.pry
 go_to_latest_problem
 
 program_name = get_program_name
